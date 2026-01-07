@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yıldız Kaptanı: Bayes Kuşağı | Koşullu Olasılık Oyunu</title>
+    <meta name="description"
+        content="Galaksiler arası ticaret yaparak Bayes teoremini ve koşullu olasılığı öğrenin. Eğlenceli bir uzay macerası!">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Stats Bar -->
+    <div id="stats-bar">
+        <div class="stat">
+            <span>💰</span> KREDİ: <span id="player-credits">250</span>
+        </div>
+        <div class="stat">
+            <span>🚀</span> YAKIT: <span id="player-fuel">10</span>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <h1>YILDIZ KAPTANI: BAYES KUŞAĞI</h1>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Mission Log -->
+        <div id="mission-log">
+            <p id="message">Kaptan, radar dört asteroit kümesi tespit etti. Birinde kristal madenleri (💎) yoğun,
+                diğer üçünde uzay enkazı (🪨) var. Sonda göndererek veri toplayalım mı?</p>
+        </div>
+
+        <!-- Asteroid Belts -->
+        <div id="doors-container">
+            <!-- Asteroids will be rendered by JavaScript -->
+        </div>
+
+        <!-- Scanner Output -->
+        <div id="scanner-output">
+            <p id="radar-data">
+                <strong>📊 Başlangıç Radar Verisi:</strong><br>
+                A: %25 | B: %25 | C: %25 | D: %25
+            </p>
+            <p id="posterior-info" style="display: none;"></p>
+        </div>
+
+        <!-- Action Panel -->
+        <div id="action-panel">
+            <button id="observation-button" onclick="performObservation()">
+                📡 SONDA GÖNDER (-100 Kredi)
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
